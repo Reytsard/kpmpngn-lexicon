@@ -5,27 +5,27 @@ import Papa from "papaparse";
 export default function Table() {
   const [words, setWords] = useState([]);
 
-const fetchWords = async () => {
-  try {
-    const response = await fetch("Panga Lexicon - Dictionary.csv");
-    const text = await response.text();
+  const fetchWords = async () => {
+    try {
+      const response = await fetch("Panga Lexicon - Dictionary.csv");
+      const text = await response.text();
 
-    const { data } = Papa.parse(text, {
-      header: true,
-      skipEmptyLines: true,
-    });
+      const { data } = Papa.parse(text, {
+        header: true,
+        skipEmptyLines: true,
+      });
 
-    // Add a unique id (required by MUI DataGrid)
-    const dataWithIds = data.map((row, index) => ({
-      ...row,
-      id: index,
-    }));
+      // Add a unique id (required by MUI DataGrid)
+      const dataWithIds = data.map((row, index) => ({
+        ...row,
+        id: index,
+      }));
 
-    setWords(dataWithIds);
-  } catch (e) {
-    console.error("CSV parsing error:", e);
-  }
-};
+      setWords(dataWithIds);
+    } catch (e) {
+      console.error("CSV parsing error:", e);
+    }
+  };
   const COLUMNS = [
     {
       field: "word",
@@ -34,7 +34,6 @@ const fetchWords = async () => {
       sortable: false,
     },
     {
-
       field: "part_of_speech",
       headerName: "Part of Speech",
       width: 130,
@@ -43,7 +42,7 @@ const fetchWords = async () => {
     {
       field: "definition",
       headerName: "Definition",
-      width: 330,
+      flex: 1,
       sortable: false,
     },
   ];
@@ -56,25 +55,25 @@ const fetchWords = async () => {
         columns={COLUMNS}
         rows={words} //replace with words
         getRowId={(word) => word.id}
-        getRowHeight={() => 'auto'}
-       // disableRowSelectionOnClick
+        getRowHeight={() => "auto"}
+        // disableRowSelectionOnClick
+        disableColumnMenu={true}
         sx={{
-          border: '2px solid #5fbb57ff',
-          '& .MuiDataGrid-cell': {
-            color: 'black',
-            whiteSpace: 'normal',
-            wordWrap: 'break-word',
-            lineHeight: '1.4',
-          
+          border: "2px solid #5fbb57ff",
+          "& .MuiDataGrid-cell": {
+            color: "black",
+            whiteSpace: "normal",
+            wordWrap: "break-word",
+            lineHeight: "1.4",
           },
-          '& .MuiDataGrid-columnHeaders': {
-            color: 'green',
-            fontSize: '1rem',
-            borderBottom: '2px solid #5fbb57ff',
+          "& .MuiDataGrid-columnHeaders": {
+            color: "green",
+            fontSize: "1rem",
+            borderBottom: "2px solid #5fbb57ff",
           },
- 
-          '& .MuiDataGrid-row': {
-            alignItems: 'start', // ensures top alignment for wrapped text
+
+          "& .MuiDataGrid-row": {
+            alignItems: "start", // ensures top alignment for wrapped text
           },
         }}
       />
