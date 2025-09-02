@@ -5,11 +5,14 @@ import Footer from "./Footer";
 
 function TestPage() {
   return (
+    <>
     <div>
       <About />
       <Table />
-      <Footer />
     </div>
+      <Footer />
+
+    </>
   );
 }
 
