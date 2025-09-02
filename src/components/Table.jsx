@@ -53,6 +53,7 @@ const fetchWords = async () => {
   return (
     <>
       <DataGrid
+      className="mx-4"
         columns={COLUMNS}
         rows={words} //replace with words
         getRowId={(word) => word.id}
