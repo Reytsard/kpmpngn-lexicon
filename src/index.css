@@ -66,3 +66,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left,
+.footer-right {
+  font-size: 0.75rem;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 0.5rem;
+}
