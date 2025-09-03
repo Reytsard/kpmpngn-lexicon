@@ -6,11 +6,18 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import LandingPage from "./components/LandingPage.jsx";
 import TestPage from "./components/TestPage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DefaultLayout from "./layout/DefaultLayout.jsx";
+import Translate from "./components/Translate.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    Component: DefaultLayout,
+    children: [
+      { index: true, Component: LandingPage },
+      { path: "words", Component: TestPage },
+      { path: "translate", Component: Translate },
+    ],
   },
   {
     path: "/words",
