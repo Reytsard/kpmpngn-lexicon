@@ -6,15 +6,11 @@ import Footer from "./Footer";
 
 function TestPage() {
   return (
-    <>    
-    <header>
-      <Header />
-    </header>
-    <div>
-      <About />
-      <Table />
-    </div>
-    <Footer/>
+    <>
+      <div>
+        <About />
+        <Table />
+      </div>
     </>
   );
 }
