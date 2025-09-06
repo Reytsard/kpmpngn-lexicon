@@ -91,6 +91,11 @@ footer {
   padding: 20px;
 }
 
+.footer-top{
+  display: flex;
+  justify-content: center;
+}
+
 .footer-main {
   display: flex;
   justify-content: space-between;
