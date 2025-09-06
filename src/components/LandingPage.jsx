@@ -6,14 +6,12 @@ import {
   CardBody,
   CardText,
   CardTitle,
-  Col,
   Container,
-  Row,
 } from "react-bootstrap";
 
 export default function LandingPage() {
   return (
-    <div className="h-100 p-2 ">
+    <Container className="h-100 p-2 ">
       <Typography variant="h3" className="mb-2">
         Welcome to Group 4 Kapampanpangan lexicon
       </Typography>
@@ -30,40 +28,30 @@ export default function LandingPage() {
         explicabo aliquam? Temporibus, vitae.
       </Typography>
 
-      <Container>
-        <Col>
-          <Row>
-            <Typography variant="h2" className="mt-5">
-              How Words Are Created
-            </Typography>
-          </Row>
-          <Row>
-            <Typography variant="body">Explain how words were form.</Typography>
-            <Typography variant="body">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
-              totam id pariatur repudiandae odio eaque doloremque porro quam
-              explicabo eum reprehenderit dicta rerum, ducimus officia
-              accusantium illo sed ex quas.
-            </Typography>
-          </Row>
-          <Row>
-            <Typography variant="h2" className="mt-5">
-              Patterns
-            </Typography>
-          </Row>
-          <Row>
-            <Typography variant="body">
-              Explain Patterns found during words.
-            </Typography>
-            <Typography variant="body">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
-              totam id pariatur repudiandae odio eaque doloremque porro quam
-              explicabo eum reprehenderit dicta rerum, ducimus officia
-              accusantium illo sed ex quas.
-            </Typography>
-          </Row>
-        </Col>
-      </Container>
+      <Typography variant="h2" className="mt-5">
+        How Words Are Created
+      </Typography>
+      <Typography variant="body">Explain how words were form.</Typography>
+      <Typography variant="body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit totam id
+        pariatur repudiandae odio eaque doloremque porro quam explicabo eum
+        reprehenderit dicta rerum, ducimus officia accusantium illo sed ex quas.
+      </Typography>
+      <Typography variant="h2" className="mt-5">
+        Patterns
+      </Typography>
+      <Typography variant="body">
+        Explain Patterns found during words.
+      </Typography>
+      <Typography variant="body">
+        For Action words, we have noticed that the words are usually starting
+        with "n" or "m".
+      </Typography>
+      <Typography variant="body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit totam id
+        pariatur repudiandae odio eaque doloremque porro quam explicabo eum
+        reprehenderit dicta rerum, ducimus officia accusantium illo sed ex quas.
+      </Typography>
 
       <Typography variant="h5" className="mt-5">
         Check out some of the resources we have created to make understanding
@@ -95,6 +83,6 @@ export default function LandingPage() {
           </CardBody>
         </Card>
       </div>
-    </div>
+    </Container>
   );
 }
