@@ -4,7 +4,11 @@ import { NavLink } from "react-router";
 
 export default function Footer() {
     return <footer className="w-full bg-secondary">
-        <NavLink to={'/words'} className="px-2 text-white rounded">Words</NavLink>
+            <div className="footer-top">
+              <NavLink to={'/words'} className="px-2 text-white rounded">Words</NavLink>
+              <NavLink to={'/about'} className="px-2 text-white rounded">About</NavLink>
+              <NavLink to={'/translate'} className="px-2 text-white rounded">Translate</NavLink>
+            </div>
             <div className="footer-main">
                 <div className="footer-left">
                     Copyright © 2025 Kapampangan Group
