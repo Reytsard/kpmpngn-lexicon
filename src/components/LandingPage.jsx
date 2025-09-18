@@ -80,7 +80,9 @@ export default function LandingPage() {
             <CardText>
               Words in kapampangan with its corresponding meaning in english
             </CardText>
-            <Button variant="primary">Learn More...</Button>
+            <Button variant="primary" href="/words">
+              Learn More...
+            </Button>
           </CardBody>
         </Card>
         <Card
